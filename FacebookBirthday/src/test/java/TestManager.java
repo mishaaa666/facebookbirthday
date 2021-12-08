@@ -17,6 +17,8 @@ public class TestManager {
     public static String login;
     public static String password;
     public static String userName;
+    public static String login1;
+    public static String password1;
 
     @BeforeAll
     public static void setUp() throws IOException {
@@ -32,6 +34,8 @@ public class TestManager {
         login =  UUID.randomUUID() + "@liti.test";
         password = "testpassword123";
         userName = "Test";
+        login1= "sasha@liti.test";
+        password1 = "12345678";
         System.setProperty("webdriver.chrome.driver", "/Users/maidan/Downloads/chromedriver");
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--disable-notifications");
