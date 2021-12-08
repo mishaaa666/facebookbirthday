@@ -17,7 +17,7 @@ public class FacebookTest extends TestManager {
         driver.get(url);
         driver.findElement(By.cssSelector("input[id='email']")).sendKeys(login);
         driver.findElement(By.cssSelector("input[id='pass']")).sendKeys(password);
-        driver.findElement(By.cssSelector("label[id='loginbutton']")).click();
+        driver.findElement(By.xpath("//*[@id=/'u_0_d_Sy/']")).click();
     }
 
     @Test
@@ -25,10 +25,10 @@ public class FacebookTest extends TestManager {
        phrases.add("be healthy and wealthy");
         //phrases.add("good luck have fun");
        // phrases.add("")*/
-        phrases.add("! Щастя здоровля");
-        phrases.add("! Море удачи и дачу у моря");
-        phrases.add("! Чтобы у тебя все было и ничего тебе за это не было");
-        phrases.add("! Діточок як в небі зірочок");
+        phrases.add("! ????? ????????");
+        phrases.add("! ???? ????? ? ???? ? ????");
+        phrases.add("! ????? ? ???? ??? ???? ? ?????? ???? ?? ??? ?? ????");
+        phrases.add("! ??????? ?? ? ???? ???????");
         phrases.add("flalalal");
         phrases.add("befthe");
         phrases.add("flalwhtrhtehalal");
@@ -56,7 +56,7 @@ public class FacebookTest extends TestManager {
             WebElement element = driver.findElement(By.xpath(xPath));
             userName=element.getText();
             System.out.println(userName);
-            driver.findElement(By.cssSelector("textarea[class='enter_submit uiTextareaNoResize uiTextareaAutogrow uiStreamInlineTextarea inlineReplyTextArea mentionsTextarea textInput']")).sendKeys("Привет, " + userName + phrases.get(rand.nextInt(phrases.size())) + Keys.ENTER);
+            driver.findElement(By.cssSelector("textarea[class='enter_submit uiTextareaNoResize uiTextareaAutogrow uiStreamInlineTextarea inlineReplyTextArea mentionsTextarea textInput']")).sendKeys("??????, " + userName + phrases.get(rand.nextInt(phrases.size())) + Keys.ENTER);
            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector("textarea[class='enter_submit uiTextareaNoResize uiTextareaAutogrow uiStreamInlineTextarea inlineReplyTextArea mentionsTextarea textInput']")));
         }
 
